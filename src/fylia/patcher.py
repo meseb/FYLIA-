@@ -135,10 +135,10 @@ class Patcher:
         Cerca nel testo istruzioni per creare/modificare file
         
         Formato atteso:
-        File: path/to/file.py
-        ```python
-        codice...
-        ```
+            File: path/to/file.py
+            ```python
+            codice...
+            ```
         
         Args:
             text: Testo da analizzare

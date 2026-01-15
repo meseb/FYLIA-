@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script di verifica completa per FYLIA
 
 echo "=============================================================="
