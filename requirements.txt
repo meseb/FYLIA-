@@ -1,0 +1,8 @@
+# Nessuna dipendenza esterna richiesta per la versione base
+# FYLIA è progettata per funzionare solo con la libreria standard Python
+
+# Dipendenze opzionali per funzionalità avanzate:
+# rich>=10.0.0           # Per TUI avanzata con colori e layout
+# textual>=0.1.0         # Per TUI moderna e interattiva
+# openai>=1.0.0          # Per integrazione con OpenAI API
+# anthropic>=0.3.0       # Per integrazione con Anthropic API
