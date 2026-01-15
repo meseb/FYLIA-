@@ -104,14 +104,14 @@ class CodeMapGenerator:
                 classes = []
                 functions = []
                 
-                for node in ast.walk(tree):
+                # Estrai classi e funzioni top-level direttamente dal body del modulo
+                for node in tree.body:
                     if isinstance(node, ast.ClassDef):
                         methods = [m.name for m in node.body if isinstance(m, ast.FunctionDef)]
                         classes.append((node.name, methods))
-                    elif isinstance(node, ast.FunctionDef) and isinstance(node, ast.FunctionDef):
-                        # Solo funzioni top-level (non metodi)
-                        if not any(isinstance(parent, ast.ClassDef) for parent in ast.walk(tree)):
-                            functions.append(node.name)
+                    elif isinstance(node, ast.FunctionDef):
+                        # Funzioni top-level (direttamente nel body del modulo)
+                        functions.append(node.name)
                 
                 if classes or functions:
                     rel_path = py_file.relative_to(root)
