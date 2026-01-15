@@ -1,0 +1,14 @@
+# CLI framework
+click>=8.0.0
+
+# TUI framework - textual is well-supported in Termux
+textual>=0.1.0
+
+# Code parsing for map generation
+ast-comments>=1.1.0
+
+# Diff and patch utilities
+unidiff>=0.7.0
+
+# Testing
+pytest>=7.0.0

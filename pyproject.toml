@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fylia"
+version = "0.1.0"
+description = "FYLIA - Programmare parlando, capire programmando"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "meseb", email = "messoud.sebbahi@gmail.com"}
+]
+keywords = ["cli", "tui", "termux", "android", "ai", "code-generation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Environment :: Console",
+    "Operating System :: Android",
+]
+dependencies = [
+    "click>=8.0.0",
+    "textual>=0.1.0",
+    "ast-comments>=1.1.0",
+    "unidiff>=0.7.0",
+]
+
+[project.scripts]
+fylia = "fylia.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/meseb/FYLIA-"
+Repository = "https://github.com/meseb/FYLIA-"
+
+[tool.setuptools.packages.find]
+where = ["src"]
