@@ -38,6 +38,7 @@ src/fylia/
 
 ### Stile Python
 1. **Type hints**: Usa sempre type hints per parametri e return types
+   - Per Python 3.8 compatibilità, usa `from typing import List, Dict, Optional` invece di `list`, `dict`, etc.
 2. **Docstrings**: Documenta classi e funzioni con docstring chiare ma non prolisse
 3. **Commenti**: Aggiungi commenti solo quando necessario per spiegare logica complessa
 4. **Naming**: 
@@ -183,7 +184,9 @@ Aggiungerò [cosa] nel file [nome_file] perché [motivazione].
 Quando aggiungi una nuova funzione alla mappa:
 
 ```python
-def _extract_imports(self, tree: ast.Module) -> list[str]:
+from typing import List
+
+def _extract_imports(self, tree: ast.Module) -> List[str]:
     """
     Estrae le import da un modulo Python
     
